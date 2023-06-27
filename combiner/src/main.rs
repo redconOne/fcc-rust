@@ -121,11 +121,6 @@ fn main() -> Result<(), ImageDataErrors> {
     );
     let combined_data = combine_images(image_1, image_2);
 
-    println!(
-        "original: {}, updating: {}",
-        output.data.capacity(),
-        combined_data.len()
-    );
     let set_data_res = output.set_data(combined_data);
 
     match set_data_res {
